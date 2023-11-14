@@ -1,6 +1,6 @@
 #Passat el menú ara hi ha que añadir les operacions if, else, elif
 
-def calculadora_enters ():
+def calculadora_enters():
     op = 1
     while op>0:
         print("""
@@ -36,7 +36,7 @@ def calculadora_enters ():
             case 5:
                 op = -1
 
-def calculadora_reals ():
+def calculadora_reals():
     z = 1
     while z>0:
         print("""
@@ -44,7 +44,7 @@ def calculadora_reals ():
                   1. Sumar
                   2. Resta
                  3. Divició
-                 4. Multiplicar
+                 4. Multiplicar1
                   5. Sortida
                  """)
         z = int(input("Elegeix una opció: "))
@@ -71,17 +71,44 @@ def calculadora_reals ():
             case 5:
                 z =-1
 
+def canvi_de_base():
+    print("Canvi de base")
+    op3 = 1
+    while op3>0:
+        print(""""
+            Canvi de base
+                1. Binari
+                2. Octal
+                3. Hexadecimal
+                4. Sortir
+              """)
+        op3 = int(input("Elige la opción: "))
+        match op3:
+            case 1:         #Binari
+                x = int(input("Introdueix un nombre: "))
+                print(bin(x))
+            case 2:         #Octal
+                x = int(input("Introdueix un nombre: "))
+                print(oct(x))
+            case 3:         #Hexadecimal
+                x = int(input("Introdueix un nombre: "))
+                print(hex(x))
+            case 4:          #Surt
+                print("Gràcies, fins un altre \n\n")
+                op3=-1
+
 def menu_principal():
     b = 1
-    while b>0:
+    while b > 0:
         print("""
             Menu_principal:
                 1. Calculadora enteros
                 2. Calculadora reales
-                3. salida
+                3. Canvis de base
+                4. Sortida
             """)
-        b = int(input("Elige la opción: "))
-        if b>0 and b<4:
+        b = int(input("Elige la opció: "))
+        if b>0 and b<5:
             return b
         else:
             print("Opció no vàlida, torni a indicar la seva selecció: \n")
@@ -95,7 +122,9 @@ while opcio>0:
         case 1:
             calculadora_enters()
         case 2:
-            calculadora_reals()    
+            calculadora_reals()
         case 3:
+            canvi_de_base()
+        case 4:
             print("Gracies per utiliçar el programa")
             opcio = -1
