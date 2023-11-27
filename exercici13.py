@@ -2,11 +2,11 @@ def numero_mayor():
     a = int(input("Introduce un numero: "))
     b = int(input("Introduce un numero: "))
     if a>b:
-        print("El número major {} i {} és {}".format(a, b, a))
+        print("El número mayor entre {} i {} és {}".format(a, b, a))
     elif b>a:
-        print("El número major {} i {} és {}".format(a, b, b))
+        print("El número mayor entre {} i {} és {}".format(a, b, b))
     else:
-        print("El números són iguals {} i {}".format(a, b))
+        print("Los números {} i {} són iguales".format(a, b))
 
 def menu():
     print("1. Comparar números")

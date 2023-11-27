@@ -1,3 +1,4 @@
+#Fornas de multiplicar
 a =[2, 3, 4]
 print(a)
 for i in a:
@@ -20,9 +21,3 @@ def segona_ocurrencial(l,e):
     else:
         print("Nomes hi ha zero o una ocurrència")
     
-#Programa principal
-l=(1, 4, 2, (1, 3, 3), 3, 4, 2, 1)
-x= int(input("Elegeix l'element que vols cercar la 2a ocurrencia "))
-segona_ocurrencial(l, x)
-
-
