@@ -8,10 +8,10 @@ def dibuixar_imatge(imatge):
 
 # Ejemplo de uso
 imatge_a_dibujar = [
-    [2, 3, 4, 3, 2],
+    [7, 3, 4, 3, 7],
     [5, 6, 5],
-    [2, 2, 2, 2, 2],
-    [4, 3, 2, 1, 2, 3, 4]
+    [7, 6, 8, 2, 5],
+    [4, 3, 1, 2, 6, 3, 7]
 ]
 
 dibuixar_imatge(imatge_a_dibujar)
