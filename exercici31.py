@@ -1,9 +1,24 @@
-def nums_que_comencen_per_a(llista_noms):
-    noms_comencen_per_a = [nom for nom in llista_noms if nom.lower().startswith('a')]
-    return len(noms_comencen_per_a)
+def noms_que_comencen_per(llista,lletra):
+    comptador = 0
+    llnom= []
+    for e in llista:
+        if e[0]==lletra:
+            llnom.append(e)
+            comptador += 1
+            print("El número de noms que comencen per el caràcter {} són: {} i són: {}".format(lletra, comptador, llnom))
 
-# Exemple d'ús
-llista_noms = ['Sergi', 'Ayoub', 'Marc', 'Leiner']
-quantitat_noms = nums_que_comencen_per_a(llista_noms)
-print("{}".format(llista_noms))
-print(f"Hi ha {quantitat_noms} noms que comencen per la lletra 'a'.")
+def llegir_noms():
+    i=0
+    l=[]
+    print("Introdueixi noms a la llista, per acabar posau -1: ")
+    while i>-1:
+        l.append(input("Posi el següent nom: "))
+    if (l[i]=="-1"):
+        l.remove("-1")
+        i=-5
+        i+=1
+        return l
+        
+# Programa principal
+noms = llegir_noms()
+noms_que_comencen_per(noms,"a")

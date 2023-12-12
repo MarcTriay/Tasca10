@@ -1,26 +1,18 @@
-def numero_mayor():
-    a = int(input("Introduce un numero: "))
-    b = int(input("Introduce un numero: "))
-    if a>b:
-        print("El número mayor entre {} i {} és {}".format(a, b, a))
-    elif b>a:
-        print("El número mayor entre {} i {} és {}".format(a, b, b))
+def gran(a, b, c):
+    if a >= b:
+        if a >= c:
+            return a
+        else:
+            return c
     else:
-        print("Los números {} i {} són iguales".format(a, b))
+        if b >= c:
+            return b
+        else:
+            return c
 
-def menu():
-    print("1. Comparar números")
-    print("2. Salir")
-    return int(input("Introduce una opción: "))
-
-#Programa principal
-opcio = 1
-while opcio>0:
-    opcio = menu()
-    match opcio:
-        case 1:
-            numero_mayor()
-        case 2:
-            opcio=-1
-        case other:
-            print("Opció no vàlida")
+# Uso de la función
+x = int(input("Introduce el primer número a comparar: "))
+y = int(input("Introduce el segundo número a comparar: "))
+z = int(input("Introduce el tercer número a comparar: "))
+resultado = gran(x, y, z)
+print("El número más grande es:", resultado)

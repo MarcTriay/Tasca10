@@ -5,7 +5,7 @@ def major(a):
         elif a< 18:
           print("Es menor de edad")
         else:
-             print("Té 18 anys")
+             print("Té 18 anys, es a dir es major de edad")
 
 #Programa principal
 x = int(input("Ingrese la edad de la persona "))

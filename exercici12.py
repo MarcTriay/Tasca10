@@ -1,124 +1,105 @@
+# Funciones auxiliares
 def menu_principal():
-    a = 1
-    while a>0:
-        print("""
-            menu_principal:
-                1. Calculadora enteros
-                2. Calculadora reales
-                3. Canvis de base
-                4. salida
-            """)
-        a = int(input("Elige la opción: "))
-        if a>0 and a<5:
-            return a
-        else:
-            print("Vuelve a Intentarlo: \n")
+    print("""
+    Menú Principal de la Calculadora:
+    1. Números enteros
+    2. Números reales
+    3. Conversiones de base
+    0. Salir
+    """)
+    opcion = input("Seleccione la opción que desee: ")
+    return opcion
 
-def calculadora_enters():
-    print("Calculadra de enters")
-    op = 1
-    while op>0:
-        print(""""
-            Calculadora de enters
-                1. Sumar
-                2. Resta
-                3. Multiplicación
-                4. División
-                5. Sortir
-              """)
-        op = int(input("Elige la opción: "))
-        match op:
-            case 1: #Sumar
-                x = int(input("Introdueix el primer nombre: "))
-                y = int(input("Introdueix el segon nombre: "))
-                print("{} + {} = {}".format(x, y, x+y))
-            case 2: #Restar
-                x = int(input("Introdueix el primer nombre: "))
-                y = int(input("Introdueix el segon nombre: "))
-                print("{} - {} = {}".format(x, y, x-y))
-            case 3: #Multiplicar
-                x = int(input("Introdueix el primer nombre: "))
-                y = int(input("Introdueix el segon nombre: "))
-                print("{} * {} = {}".format(x, y, x*y))
-            case 4: #Dividir
-                x = int(input("Introdueix el primer nombre: "))
-                y = int(input("Introdueix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
-            case 5: #Sortir
-                print("Adeu, ja tornaras a la calculadora inicial \n\n")
-                op=-1
+def menu_enteros():
+    print("""
+        Menú de la Calculadora de Números Enteros:
+        1. Sumar
+        2. Restar
+        3. Multiplicar
+        4. Dividir
+        5. Potencia
+        6. Módulo
+        7. Cociente
+        0. Salir
+        """)
+    opcion = input("Seleccione la opción que desee: ")
+    return opcion
 
-def calculadora_reals():
-    print("Calculadora de reals")
-    op2 = 1
-    while op2>0:
-        print(""""
-            Calculadora de enters
-                1. Sumar
-                2. Resta
-                3. Multiplicación
-                4. División
-                5. Sortir
-              """)
-        op2 = int(input("Elige la opción: "))
-        match op2:
-            case 1: #Sumar
-                x = float(input("Introdueix el primer nombre: "))
-                y = float(input("Introdueix el segon nombre: "))
-                print("{} + {} = {}".format(x, y, x+y))
-            case 2: #Restar
-                x = float(input("Introdueix el primer nombre: "))
-                y = float(input("Introdueix el segon nombre: "))
-                print("{} - {} = {}".format(x, y, x-y))
-            case 3: #Multiplicar
-                x = float(input("Introdueix el primer nombre: "))
-                y = float(input("Introdueix el segon nombre: "))
-                print("{} * {} = {}".format(x, y, x*y))
-            case 4: #Dividir
-                x = float(input("Introdueix el primer nombre: "))
-                y = float(input("Introdueix el segon nombre: "))
-                print("{} / {} = {}".format(x, y, x/y))
-            case 5: #Sortir
-                print("Adeu, ja tornaras a la calculadora inicial \n\n")
-                op2=-1
+def menu_reales():
+    print("""
+        Menú de la Calculadora de Números Reales:
+        1. Sumar
+        2. Restar
+        3. Multiplicar
+        4. Dividir
+        5. Potencia
+        0. Salir
+        """)
+    opcion = input("Seleccione la opción que desee: ")
+    return opcion
 
-def canvi_de_base():
-    print("Canvi de base")
-    op3 = 1
-    while op3>0:
-        print(""""
-            Canvi de base
-                1. Binari
-                2. Octal
-                3. Hexadecimal
-                4. Sortir
-              """)
-        op3 = int(input("Elige la opción: "))
-        match op3:
-            case 1: #Binari
-                x = int(input("Introdueix un nombre: "))
-                print(bin(x))
-            case 2: #Octal
-                x = int(input("Introdueix un nombre: "))
-                print(oct(x))
-            case 3: #Hexadecimal
-                x = int(input("Introdueix un nombre: "))
-                print(hex(x))
-            case 4: #Sortir
-                print("Adeu, ja tornaras a la calculadora inicial \n\n")
-                op3=-1
+def menu_conversiones_base():
+    print("""
+        Menú de la Calculadora de Conversiones de Base:
+        1. Convertir de binario a decimal, octal y hexadecimal
+        2. Convertir de octal a binario, decimal y hexadecimal
+        3. Convertir de decimal a binario, octal y hexadecimal
+        4. Convertir de hexadecimal a binario, octal y decimal
+        0. Salir
+        """)
+    opcion = input("Seleccione la opción que desee: ")
+    return opcion
 
-#Programa principal
-opcio = 1
-while opcio>0:
-        opcio =  menu_principal()
-        match opcio:
-            case 1:
-                calculadora_enters()
-            case 2:
-                calculadora_reals()
-            case 3:
-                canvi_de_base()
-            case 4:
-                print("Gràcies, m'en vaig!")
-                opcio=-1
+# Funciones para reducir el número de funciones convirtiendo entre bases
+# ...
+
+# Programa principal de la calculadora
+opcion = "1"
+while opcion != "0":
+    if opcion != "0":
+        opcion = menu_principal()
+    match opcion:
+        case "1":  # Calculadora de Números Enteros
+            sub_opcion = menu_enteros()
+            if sub_opcion != "0":
+                a = int(input("Ingrese el primer operando: "))
+                b = int(input("Ingrese el segundo operando: "))
+            match sub_opcion:
+                # Operaciones para números enteros
+                # ...
+                case "0":
+                    print("Adiós")
+                    opcion = "0"
+                case _:
+                    print("Opción no válida")
+        case "2":  # Calculadora de Números Reales
+            sub_opcion = menu_reales()
+            if sub_opcion != "0":
+                a = float(input("Ingrese el primer operando: "))
+                b = float(input("Ingrese el segundo operando: "))
+            match sub_opcion:
+                # Operaciones para números reales
+                # ...
+                case "0":
+                    print("Adiós")
+                    opcion = "0"
+                case _:
+                    print("Opción no válida")
+        case "3":  # Calculadora de Conversiones de Base
+            sub_opcion = menu_conversiones_base()
+            if sub_opcion != "0":
+                a = input("Ingrese el número a convertir: ")
+            match sub_opcion:
+                # Operaciones para conversiones de base
+                # ...
+                case "0":
+                    print("Adiós")
+                    opcion = "0"
+                case _:
+                    print("Opción no válida")
+        case "0":
+            print("Adiós")
+            opcion = "0"
+        case _:
+            print("Adiós")
+            opcion = "0"

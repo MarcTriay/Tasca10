@@ -1,7 +1,9 @@
-def vocales(x):
-    if x=="a" or x=="e" or x=="i" or x=="o" or x=="u" or x=="A" or x=="E" or x=="I" or x=="O" or x=="U":
-        return True
-    else:
-        return None
-caracter = input("introduce una Letra: ")
-print(vocales(caracter))
+def es_vocal(c):
+    return c.lower() in ['a', 'e', 'i', 'o', 'u']
+
+# Ús de la funció
+lletra = input('Introdueixi una lletra per a veure si és vocal o no: ')
+if es_vocal(lletra):
+    print('És vocal!')
+else:
+    print('No és vocal!')

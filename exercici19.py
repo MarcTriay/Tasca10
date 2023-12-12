@@ -4,10 +4,10 @@ def es_palindrom(palabra):
     return palabra == palabra[::-1]
 
 #Ejmplos de uso.
-print(es_palindrom("radar"))   
-print(es_palindrom("air"))     
-print(es_palindrom("civic"))  
-print(es_palindrom("moix"))  
-print(es_palindrom("tapat"))   
-print(es_palindrom("casa"))   
-print(es_palindrom("refer")) 
+print(es_palindrom("messi"))   
+print(es_palindrom("fuerza"))     
+print(es_palindrom("puerta"))  
+print(es_palindrom("vaca"))  
+print(es_palindrom("scar"))   
+print(es_palindrom("arbol"))   
+print(es_palindrom("sniper")) 

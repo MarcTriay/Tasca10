@@ -1,33 +1,16 @@
-#Suma de lista 
-def llegir_llista():
-    # Anirà llegint elements d'una llista (Aquí enters)
-    # Retornarà la llista creada
-    a=' '
-    l=[]
-    while a!='.':
-        a = input("Introdueix un nou element de la llista: ")
-        if a!=".":
-            l.append(int(a)) # Introdueix enters, si vull paraules he de llevar int()
-        else:
-            return l
-
-def sumar_lista(llista):
+def sumar_llista(a):
     suma = 0
-    for valor in llista:
-        suma += valor
-    return suma 
+    for i in a:
+        suma += i
+    return suma
 
+def multiplicar_llista(a):
+    multiplicar = 1
+    for i in a:
+        multiplicar *= i
+    return multiplicar
 
-# Multiplicación lista
-def multiplicar_lista(lista):
-    producte = 1
-    for valor in lista:
-        producte *= valor 
-    return producte 
-
-
-
-#Programa principal
-l = llegir_llista()
-print("La suma de la llista {} és {}".format(l,sumar_lista(l)))
-print("La suma de la llista {} és {}".format(l,multiplicar_lista(l)))
+# Uso de las funciones:
+x = [3, 4, 5, 7]
+print("La suma de todos los elementos de la lista es:", sumar_llista(x))
+print("La multiplicación de todos los elementos de la lista es:", multiplicar_llista(x))

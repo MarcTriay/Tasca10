@@ -1,22 +1,26 @@
-def mostrar_majors_que(tupla, referencia):
-    majors = [num for num in tupla if num > referencia]
-    print(f"Nombres majors que {referencia}: {majors}")
+def noms_que_comencen_per(llista,lletra):
+    comptador = 0
+    llnom= []
+    for e in llista:
+        if e[0]==lletra:
+            llnom.append(e)
+            comptador += 1
+        print("El número de noms que comencen per el caràcter {} són: {} i són: {}".format(lletra, comptador, llnom))
 
-def nums_que_comencen_per(llista_noms, lletra):
-    noms_comencen_a = [nom for nom in llista_noms if nom.startswith(lletra)]
-    return len(noms_comencen_a)
+def llegir_noms():
+    i=0
+    llista=[]
+    print("Introdueixi noms a la llista, per acabar posau -1: ")
 
-def main():
-    # Funció mostrar_majors_que
-    tupla = tuple(map(int, input("Introdueix els valors de la tupla separats per espai: ").split()))
-    referencia = int(input("Introdueix la referència per comparar: "))
-    mostrar_majors_que(tupla, referencia)
-
-    # Funció nums_que_comencen_per
-    noms = input("Introdueix els noms separats per espai: ").split()
-    lletra_a = 'a'
-    quantitat_noms_a = nums_que_comencen_per(noms, lletra_a)
-    print(f"Hi ha {quantitat_noms_a} noms que comencen amb la lletra 'a'.")
-
-if __name__ == "__main__":
-    main()
+    while i>-1:
+        llista.append(input("Posi el següent nom: "))
+        if (llista[i]=="-1"):
+            llista.remove("-1")
+            i=-5
+            i+=1
+            return llista
+    
+# Programa principal
+noms = llegir_noms()
+caracter = input("Introdueixi el caràcter que vols que comencin les paraules a cercar: ")
+noms_que_comencen_per(noms,caracter)

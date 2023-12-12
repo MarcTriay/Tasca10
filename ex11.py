@@ -22,17 +22,17 @@ def calculadora_enters ():
             case 2:
                 a = int(input("Introdueix un nombre: "))
                 b = int(input("Introdueix el segon nombre per restar: "))
-                print("La resta de {} + {} = {}".format(a,b,a-b))
+                print("La resta de {} - {} = {}".format(a,b,a-b))
 
             case 3:
                 a = int(input("Introdueix un nombre: "))
                 b = int(input("Introdueix el segon nombre per multiplicar: "))
-                print("La multiplicació de {} + {} = {}".format(a,b,a*b))
+                print("La multiplicació de {} · {} = {}".format(a,b,a*b))
 
             case 4:
                 a = int(input("Introdueix un nombre: "))
                 b = int(input("Introdueix el segon nombre per dividir: "))
-                print("La divició de {} + {} = {}".format(a,b,a/b))
+                print("La divició de {} / {} = {}".format(a,b,a/b))
             case 5:
                 op = -1
 
