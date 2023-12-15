@@ -1,9 +1,9 @@
 def es_palindrom(palabra):
-    #Convertimos todas los carácteres minúsculas para considerar la mayúscula y minúsculas equivalentes.
+    #Convertim tots els caràcters minúscules per considerar la majúscula i minúscules equivalents.
     palabra = palabra.lower()
     return palabra == palabra[::-1]
 
-#Ejmplos de uso.
+#Exemples:
 print(es_palindrom("messi"))   
 print(es_palindrom("fuerza"))     
 print(es_palindrom("puerta"))  

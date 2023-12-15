@@ -1,6 +1,8 @@
+#fa que els nombres siguin random
 import random
 
 def generate_code():
+    #Fa que els nombres randoms estigui en un rango de 10
     return random.sample(range(10), 4)
 
 def check_code(guess, code):
@@ -17,6 +19,7 @@ def play_game():
     attempts = 0
 
     while True:
+        #Introdeuix les 4 xifres i les calcula
         guess = list(map(int, input("Introdueix el teu codi (4 xifres): ").strip()))
         while len(guess) != 4 or any(x < 0 or x > 9 for x in guess):
             print("Error: El codi ha de tenir 4 xifres entre 0 i 9.")
@@ -26,9 +29,11 @@ def play_game():
         attempts += 1
 
         if count[0] == 4:
+            #El final del joc
             print("Felicitats! Ho has encertat. El nombre d'intents va ser:", attempts)
             break
         else:
+            #No has endivinat totes tens que començar una altre vegada
             print("Estats:", count[0], "en la posició correcta,", count[1], "coincidències.")
 
 play_game()

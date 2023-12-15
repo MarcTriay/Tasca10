@@ -7,5 +7,5 @@ for _ in range(vegades):
     for numero in range(1, 16):
         print(numero, end=' ')
 
-    # Salta una línia entre cada sèrie
+    # Salta una línia entre cada serie
     print()

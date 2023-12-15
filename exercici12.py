@@ -1,5 +1,6 @@
 # Funciones auxiliares
 def menu_principal():
+    #Donam unes opcions de qual podrem elegir una, de les qual despres seran profunditzades menys la opcio sortir ja que el que farà es sortir
     print("""
     Menú Principal de la Calculadora:
     1. Números enteros
@@ -11,6 +12,7 @@ def menu_principal():
     return opcion
 
 def menu_enteros():
+    #Perfecte!Si ha passat per aqui has introduit el nº1 i aqui profunditçam amb qui tipo de operació vols fer.
     print("""
         Menú de la Calculadora de Números Enteros:
         1. Sumar
@@ -26,6 +28,7 @@ def menu_enteros():
     return opcion
 
 def menu_reales():
+        #Perfecte!Si ha passat per aqui has introduit el nº2 i aqui profunditçam amb qui tipo de operació vols fer.
     print("""
         Menú de la Calculadora de Números Reales:
         1. Sumar
@@ -39,6 +42,7 @@ def menu_reales():
     return opcion
 
 def menu_conversiones_base():
+    #Perfecte!Si ha passat per aqui has introduit el nº3 i aqui profunditçam amb qui tipo de operació vols fer.
     print("""
         Menú de la Calculadora de Conversiones de Base:
         1. Convertir de binario a decimal, octal y hexadecimal
@@ -51,7 +55,6 @@ def menu_conversiones_base():
     return opcion
 
 # Funciones para reducir el número de funciones convirtiendo entre bases
-# ...
 
 # Programa principal de la calculadora
 opcion = "1"
@@ -66,7 +69,6 @@ while opcion != "0":
                 b = int(input("Ingrese el segundo operando: "))
             match sub_opcion:
                 # Operaciones para números enteros
-                # ...
                 case "0":
                     print("Adiós")
                     opcion = "0"
@@ -79,7 +81,6 @@ while opcion != "0":
                 b = float(input("Ingrese el segundo operando: "))
             match sub_opcion:
                 # Operaciones para números reales
-                # ...
                 case "0":
                     print("Adiós")
                     opcion = "0"
@@ -91,7 +92,6 @@ while opcion != "0":
                 a = input("Ingrese el número a convertir: ")
             match sub_opcion:
                 # Operaciones para conversiones de base
-                # ...
                 case "0":
                     print("Adiós")
                     opcion = "0"

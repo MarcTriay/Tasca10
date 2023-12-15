@@ -1,4 +1,5 @@
 def noms_que_comencen_per(llista,lletra):
+    #Aquesta definició el que fa és imprimir adames de calcular el comtadors
     comptador = 0
     llnom= []
     for e in llista:
@@ -8,6 +9,7 @@ def noms_que_comencen_per(llista,lletra):
             print("El número de noms que comencen per el caràcter {} són: {} i són: {}".format(lletra, comptador, llnom))
 
 def llegir_noms():
+    #Llegeix es numeros i els de va calculant
     i=0
     l=[]
     print("Introdueixi noms a la llista, per acabar posau -1: ")

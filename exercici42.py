@@ -13,5 +13,5 @@ def imprimir_taula_multiplicar(numero):
 # Demana a l'usuari que introdueixi un número
 numero = int(input("Introdueix un número: "))
 
-# Executa la funció per imprimir la taula de multiplicar del número donat
+# Fa la funció per imprimir la taula de multiplicar del número donat
 imprimir_taula_multiplicar(numero)

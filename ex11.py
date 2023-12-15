@@ -1,6 +1,7 @@
 #Passat el menú ara hi ha que añadir les operacions if, else, elif
 
 def calculadora_enters ():
+    #En aquesta funció cream una opció la qual podem elegir a quina d'aquestes opcions podem anar
     op = 1
     while op>0:
         print("""
@@ -14,6 +15,7 @@ def calculadora_enters ():
         
         op = int(input("Elige la opción: "))
         match op:
+            #Aqui el que feim es profunditzar despres de elegir la opció creada anterior li donam una estructura a cada cas. 
             case 1:
                 a = int(input("Introdueix un nombre: "))
                 b = int(input("Introdueix el segon nombre per sumar: "))
@@ -37,6 +39,7 @@ def calculadora_enters ():
                 op = -1
 
 def calculadora_reals ():
+    #Feim el mateix, cream les opcions
     z = 1
     while z>0:
         print("""
@@ -49,6 +52,7 @@ def calculadora_reals ():
                  """)
         z = int(input("Elegeix una opció: "))
         match z:
+            #profumditzam en cada opció
             case 1:
                 a = float(input("Introdueix un nombre: "))
                 b = float(input("Introdueix el segon nombre per sumar: "))
@@ -72,6 +76,7 @@ def calculadora_reals ():
                 z =-1
 
 def menu_principal():
+    #Aquest es el menu on sortir primers quels anteriors i adames aquelles opcions variaran depenent de que elegirem
     b = 1
     while b>0:
         print("""

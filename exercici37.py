@@ -7,7 +7,7 @@ def comprova_rima(paraula1, paraula2):
     ultimes_2_lletres_paraula1 = paraula1[-2:]
     ultimes_2_lletres_paraula2 = paraula2[-2:]
 
-    # Comprovem si rimen totalment o una mica
+    # Comprovem si rimen totalment o una poc
     if ultimes_3_lletres_paraula1 == ultimes_3_lletres_paraula2:
         return "Les paraules riman totalment."
     elif ultimes_2_lletres_paraula1 == ultimes_2_lletres_paraula2:

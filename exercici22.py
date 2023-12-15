@@ -3,4 +3,4 @@ def crear_puntos(l):
         print("." * n)
 
 #Program principal
-crear_puntos([1, 2, 3])
+crear_puntos([1,2,3, 5,7,10,12])

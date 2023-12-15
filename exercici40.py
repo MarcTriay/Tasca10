@@ -13,3 +13,4 @@ numero = int(input("Introdueix un número: "))
 
 # Executa la funció per contar els dígits del número
 contar_digits(numero)
+

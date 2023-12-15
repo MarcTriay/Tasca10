@@ -1,5 +1,6 @@
 #Definir una funció gran_de_tres(), donats tres números, retorni el major. Prova-la amb diferents exemples.
 def numero_mayor():
+    #En aquestes definicions lo que feim es comprobar cada possible funció
     a = int(input("Introdueix un número: "))
     b = int(input("Introdueix un número: "))
     c = int(input("Introdueix un ultimo número: "))

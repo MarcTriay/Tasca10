@@ -38,6 +38,7 @@ def trobada(canviTalaiot,v):
 
 # Funció principal 
 partidaNova = ("si")
+#Introduim les vides antes de començar
 vidas = 3
 while partidaNova == ("s") or partidaNova == ("si"):
     intro()
@@ -48,6 +49,7 @@ while partidaNova == ("s") or partidaNova == ("si"):
     elif vidas ==6:
         print("Enhorabona te has passat el joc")
     else:
+        #Aqui el que faig es dir quantes vidas té i si vol tornar a jugar
         print("Tens {} vidas pensa que si arribas a 0 has perdut".format(vidas))
     partidaNova = input("Vols tornar a mejar (jugar)? Introdueixi si o no: ")
     print("\n")

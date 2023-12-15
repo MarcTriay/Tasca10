@@ -2,12 +2,14 @@ def llegir_llista():
     a = []
     c = "a"
     while c != ".":
+        #Introdueix una elemtnllista
         c = input("Introdueixi un element de la llista i punt (.) per acabar: ")
         if c != ".":
             a.append(c)
     return a
 
 def eliminar_capicua(a):
+    #Retornam la llista
     b = []
     if len(a) > 2:
         b = a[1:-1]

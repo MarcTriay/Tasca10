@@ -1,4 +1,5 @@
 def comptar_vocals(a):
+    #Aquesta funcio el que fa es analitçar la paraula i dir quantes lletres de aquesta son vocals
     b = ('a','e','i','o','u','altres')
     vocals=[0,0,0,0,0,0]
     for i,e in enumerate(a):
@@ -16,6 +17,6 @@ def comptar_vocals(a):
             vocals[5]+=1
         for i,e in enumerate(vocals):print("La vocal {} apareix {} vegades".format(b[i], vocals[i]))
 
-#PPrincipal
+#Principal
 a = input("Introdueixi una paraula a analitzar: ")
 comptar_vocals(a)

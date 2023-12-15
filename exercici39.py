@@ -18,5 +18,5 @@ def calcular_suma_quadrats(numero):
 # Demana a l'usuari que introdueixi un número
 numero = int(input("Introdueix un número del 0-100: "))
 
-# Executa la funció per calcular la suma dels quadrats
+# Executa la funció per calcular la suma dels quadrat
 calcular_suma_quadrats(numero)
